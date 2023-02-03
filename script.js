@@ -12,12 +12,11 @@
             const { temp,humidity } = data.main
             const { speed } = data.wind
             document.querySelector(".city").innerText = "Weather in " + name
-            document.querySelector(".temp").innerText = temp 
+            document.querySelector(".temp").innerText = temp + " °C"
             document.querySelector(".description").innerText = description 
             document.querySelector(".humidity").innerText = "Humidity:" + humidity + "%"
             document.querySelector(".wind").innerText = "Wind Speed" + speed + "km/h"    
-            
-            console.log(name,icon,description,speed,humidity,temp)
+            document.querySelector(".weather").classList.remove("loading")
         },
         search: function (){
             this.fetchweather(document.querySelector("#location").value)

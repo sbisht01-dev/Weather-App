@@ -11,7 +11,8 @@ body{
     height: 100vh;
     width: 100vw;  
     background-color: black;
-    background-image: url('https://source.unsplash.com/1920x1080/?nature');
+    transition: 0.3s;
+    background-image: url('https://source.unsplash.com/2500x1080/?landscape');
 }
 
 .primary-container{   
@@ -23,25 +24,29 @@ body{
     margin: 1em; 
     backdrop-filter: blur(10px);
     box-shadow: 5px 5px 10px rgba(14, 13, 13, 0.404);
+    transition: 0.3s;
 }
 
 div .weather{
     padding: 20px;
     color: white;
+    transition: 0.3s;
+    text-transform: capitalize;
 }
 
 .search{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.3s;
 }
 
 .search input{
     width: 200px;
     height: 30px;
-    border-radius: 100px;
+    border-radius: 20px;
     border: none;
-    padding: 0.4rem 2rem;
+    padding: 0.5rem 2rem;
     font-size: 1.2rem;
     outline: none;
     color: white;
@@ -49,36 +54,21 @@ div .weather{
     font-family: inherit;
 }
 
-.search button{
-    height: 46px;
-    width: 46px;
-    margin: 15px;
-    background-color:  #7c7c7c38;
-}
-
-
-button{
-    border: none;
-    border-radius: 50px;
-    background-color: white;
-}
-
 .city{
     font-size: 2rem;
+    transition: 0.3s;
 }
 
 .temp{
     padding: 20px 0 30px;
-}
-
-.icon{
-    display: inline-block;
-    position: relative;
-    z-index: 100;
-    
+    transition: 0.3s;
 }
 
 .description,.humidity,.wind{
     font-size: 1.2rem;
+    transition: 0.3s;
 }
 
+.weather.loading{
+    visibility: hidden;
+}
